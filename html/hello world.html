@@ -2,19 +2,25 @@
 <html>
   <head>
     <meta charest="utf-8">
+    <meta http-equiv="refresh" content="5">
 	<title>我的第一个html页面</title>
 	<base href="">
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
 	<link rel="stylesheet" type="text/css" href="">
 	<style type="text/css">
-		h1{
+		p{
 			text-align: center;
-			background-color: red;
 			color:blue;
+			font-family:arial;
+			size:20px;
+		}
+		div{
+			height: 200px;
 		}
 	</style>
   </head>
   <body>
+  <div id="top">
     <h1>我的第一个标题</h1>
     <h2>我的第一个标题</h2>
 	<h3>三级标题</h3>
@@ -22,9 +28,20 @@
     <p>Hello world</p>
 	<p>这是一个段落</p>
 	<hr>
+	<table border="1" >
+	<tr>
+	<td>123</td>
+	<td>123</td>
+	</tr>
+	<td>345</td>
+	<td>345</td>
+	<tr>
+	</tr>
+	</table>
 	<a href="http://www.acfun.cn" target="top">A站链接</a>
-	<a href="mailto:xiaoguangtu@qq.com?subject=hello again">发送邮件</a>
+	<a href="mailto:xiaoguangtu@qq.com?subject=hello again" style="text-decoration: none;">发送邮件</a>
 	<hr>
-	<img id="acfun" src="E:\photos\壁纸\52520072_p0.png">
+	<img id="acfun" src="E:\photos\壁纸\52520072_p0.png" alt="我老婆">
+	</div>
   </body>
 </html>
