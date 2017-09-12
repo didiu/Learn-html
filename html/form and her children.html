@@ -1,3 +1,15 @@
+<!--样式的三种写法，
+			1.直接在标签内部添加样式。
+			2.标签名添加样式
+			3.加‘.’作为类，在标签中调用
+	表单数据的写法，
+			4.在style或者样式表中用#+id
+			5.相同样式标签可以分组。
+			6.[属性]{}属性选择器。
+			<input>引出表单控件，input的type类型表示这是什么类型的表单
+			
+			-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,25 +18,51 @@
 	<title>form数据与控件的学习</title>
 	<link rel="stylesheet" type="text/css" href="">
 	<style type="text/css">
+		.cities{
+			background-color:black;
+			color:white;
+			padding:20px;
+			text-align: center;
+		}
+		#top ,#poem{
+			border-style: solid;
+			border-width: 5px;
+			border-color:red;
+			margin: 10px;
+			padding: 15px;
+		}
 	</style>
 </head>
 <body>
 	<div>
-		<div id="top">
+		<div id="top" style="float: left;">
 			<form name="Search" action="www.baidu.com" method="get">
-			Name:<input type=" text" name="name">
-			<input type="submit" value="Submit">
-			<hr>
-			<input type="radio" name="sex" value="male">Male<br>
-			<input type="radio" name="sex" value="female">Female<br>
-			<hr>
-			<input type="checkbox" name="vehicle" value="bike">I have bike<br>
-			<input type="checkbox" name="vehicle" value="Car">I have car
-			<hr>
+				Name:<input type=" text" name="name">
+				<input type="submit" value="Submit">
+				<hr>
+				<input type="radio" name="sex" value="male">Male<br>
+				<input type="radio" name="sex" value="female">Female<br>
+				<hr>
+				<input type="checkbox" name="vehicle" value="bike">I have bike<br>
+				<input type="checkbox" name="vehicle" value="Car">I have car
+				<hr>
 			</form>
-
 		</div>
-		<div id="left"></div>
+		<div id="poem" class="cities" style="float:left;">
+			<h3>观沧海</h3>
+			<p>床前明月光，疑是地上霜。</p>
+			<p>两个黄鹂鸣<span color="green">绿</span>柳，一枝<span color="red">红</span>杏出墙来。</p>
+		</div>
+		<div id="left">
+		<p id="demo">Beijing</p>
+			<script type="text/javascript">
+			   var carnname;
+			   carnname="Volvo";
+			   document.getElementById("demo").innerHTML=carnname;
+			   var care=new Array();
+			   care[0]="hhhh"
+			</script>
+		</div>
 		<div id="right"></div>
 	</div>
 </body>
